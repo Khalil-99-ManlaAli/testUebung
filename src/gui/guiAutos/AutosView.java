@@ -1,4 +1,4 @@
-package gui;
+package gui.guiAutos;
 
 import business.Autos;
 import business.AutosModel;
@@ -163,12 +163,9 @@ public class AutosView {
 		    });
 	    }
 	    
-	    protected void zeigeAutosAn() {
-			// TODO Auto-generated method stub
-			
-		}
-
-		public void zeigeVolkshochschulekurserAn(){
+	    
+	    
+		public void zeigeAutosAn(){
 	       	if(this.autosModel.getAutos() != null){
 	       		txtAnzeige.setText(
 	       			this.autosModel.getAutos().gibAutosZurueck(' '));
@@ -178,6 +175,8 @@ public class AutosView {
 	       	}
 	       }
 	    
+
+
 	    public void zeigeInformationsfensterAn(String meldung){
 	    	new MeldungsfensterAnzeiger(AlertType.INFORMATION,"Information", meldung).zeigeMeldungsfensterAn();
 	    }	
@@ -240,6 +239,6 @@ public class AutosView {
 
 	    
 	    
-	    
+ 
 
 }

@@ -98,7 +98,7 @@ public class Autos {
   		return this.getKennzeichen() + trenner 
   			+ this.getTyp() + trenner
   		    + this.getModell() + trenner
-  		    + this.getTagespreis() + trenner + "\n"
+  		    + this.getTagespreis() + trenner 
   		    + this.getVermietetAlsString(trenner) + "\n";
   	}
 }

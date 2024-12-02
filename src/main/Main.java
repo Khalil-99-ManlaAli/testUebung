@@ -1,15 +1,18 @@
 package main;
 
-import gui.AutosAnwendersystem;
+import gui.guiAutos.AutosControl;
+import gui.guiAutosHaus.AutosHausControl;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
 
 public class Main extends Application {
 	
-	@Override
+
 	public void start(Stage primaryStage) {
-		new AutosAnwendersystem(primaryStage);
+		new AutosControl(primaryStage);
+		Stage autosHaus = new Stage();
+		new AutosHausControl(autosHaus);
 	}	
 	
 	public static void main(String[] args){

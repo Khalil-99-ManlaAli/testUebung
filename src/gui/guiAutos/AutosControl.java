@@ -1,20 +1,25 @@
-package gui;
+package gui.guiAutos;
 
 import java.io.IOException;
 
 import business.Autos;
 import business.AutosModel;
 import javafx.stage.Stage;
+import ownUtil.Observer;
 
-public class AutosControl {
+
+public class AutosControl implements Observer {
 
 	private AutosModel autosModel;
 	private AutosView  autosView;
 	
+	
+	
 	public AutosControl(Stage primStage) {
 		super();
-		this.autosModel = new AutosModel();
+		this.autosModel =  autosModel.getInstanz();
 		this.autosView = new AutosView(this,autosModel,primStage);
+		autosModel.addObserver(this);
 	}
 	 public void nehmeAutosAuf(){
 		 try{
@@ -60,6 +65,12 @@ public class AutosControl {
 					"Unbekannter Fehler beim Speichern!");
 			}
 		}
+	@Override
+	public void update() {
+		// TODO Auto-generated method stub
+		autosView.zeigeAutosAn();
+		
+	}
 	 
 
 }
